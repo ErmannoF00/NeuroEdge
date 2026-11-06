@@ -1,0 +1,16 @@
+* NeuroEdge illustrative electrode/loading frequency response, ngspice syntax
+* NOT patient safe, NOT a custom LNA, NOT a tapeout transistor netlist.
+* Randles-like electrode: Rs in series with parallel Rct/Cdl.
+Vbio bio 0 AC 1 SIN(0 20u 10)
+Rs bio e 50k
+Rct e in 1meg
+Cdl e in 100n
+* Simplified AFE input loading; replace with actual transistor LNA later
+Rin in 0 100meg
+Cin in 0 10p
+* Idealized amplifier gain stage (no noise, clipping, offset, stability limits)
+Eideal out 0 in 0 100
+Rout out 0 1meg
+.ac dec 60 0.01 100000
+.print ac vm(in) vp(in) vm(out)
+.end

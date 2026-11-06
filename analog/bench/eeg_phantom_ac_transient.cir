@@ -1,0 +1,26 @@
+* NeuroEdge existing external phantom EEG-style signal interface, no patient use.
+* NOT a validated amplifier or intracortical AFE; idealized gain block.
+* Electrode + impedance + high-pass baseline; no isolation, ESD, ADC or noise model.
+* Input: phantom 20uV peak sine at 10Hz; input load Rin=100Meg.
+Vphantom sig 0 DC 0 AC 20u SIN(0 20u 10)
+Rs sig ep 50k
+Rct ep elec 1meg
+Cdl ep elec 100n
+Rin elec 0 100meg
+Cin elec 0 10p
+* 100x idealized VCVS, unmeasured, excludes saturation and input referred noise.
+Eamp out 0 elec 0 100
+Rout out 0 100meg
+Cout out 0 1p
+.control
+set noaskquit
+tran 50u 1.0
+meas tran peak_out MAX v(out) FROM=0.5 TO=1.0
+meas tran min_out MIN v(out) FROM=0.5 TO=1.0
+ac dec 40 0.1 1000
+let gain_abs = mag(v(out)/v(sig))
+meas ac gain_abs_10hz FIND gain_abs AT=10
+print gain_abs_10hz
+quit
+.endc
+.end

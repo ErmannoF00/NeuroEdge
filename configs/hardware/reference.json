@@ -1,0 +1,10 @@
+{
+  "backend": "sram_nmc",
+  "input_bits": 8,
+  "weight_bits": 8,
+  "accum_bits": 32,
+  "lanes": 16,
+  "clock_mhz": 50,
+  "event_mode": true,
+  "nvm_macro": false
+}

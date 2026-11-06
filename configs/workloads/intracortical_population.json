@@ -1,0 +1,11 @@
+{
+  "name": "intracortical_population",
+  "input": "binned_spikes",
+  "bin_ms": 10,
+  "task": "decoder_configurable",
+  "split": "session_or_trial_held_out",
+  "metrics": [
+    "task_metric",
+    "latency_ms"
+  ]
+}

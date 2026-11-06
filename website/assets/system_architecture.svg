@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="850" viewBox="0 0 1600 850" role="img" aria-labelledby="title desc">
+<title id="title">NeuroEdge: verified digital neural-feature path and proposed feedback integration</title>
+<desc id="desc">Recorded neural features, transactional offset memory, saturating integer feature bridge, causal neural speech decoder, and 41 output logits. A supervised synthetic software feedback replay applies bounded updates only to the following trial. Compute-in-memory hardware remains proposed.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07121b"/><stop offset="1" stop-color="#0c1822"/></linearGradient><linearGradient id="light" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#72e4b5"/><stop offset="1" stop-color="#7cbce8"/></linearGradient>
+<pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#345362" stroke-opacity=".12"/></pattern>
+<filter id="glow"><feGaussianBlur stdDeviation="7"/></filter>
+<marker id="arrow" markerWidth="7" markerHeight="7" refX="5.8" refY="3.5" orient="auto"><path d="M0 0L7 3.5 0 7" fill="none" stroke="#81ecc2" stroke-width="1.6"/></marker>
+<marker id="amber" markerWidth="7" markerHeight="7" refX="5.8" refY="3.5" orient="auto"><path d="M0 0L7 3.5 0 7" fill="none" stroke="#f6c18a" stroke-width="1.6"/></marker>
+<style>text{font-family:Inter,'DejaVu Sans',Arial,sans-serif} .muted{fill:#91acb8}.micro{font-size:15px;letter-spacing:1.6px}.tag{font-size:13px;font-weight:700;letter-spacing:1.5px}.h{font-size:24px;font-weight:700;fill:#eaf7f4}.body{font-size:17px;fill:#bbccd2}.tiny{font-size:14px;fill:#a1b8c2}</style></defs>
+<rect width="1600" height="850" fill="url(#bg)"/><rect width="1600" height="850" fill="url(#grid)"/>
+<rect x="50" y="45" width="38" height="38" rx="8" fill="#103e38" stroke="#6debb2" stroke-width="1.5"/>
+<path d="M60 65H78M69 56V74" stroke="#a4ffca" stroke-width="2.3" stroke-linecap="round"/>
+<text x="106" y="73" fill="#f5faf7" font-size="29" font-weight="800" letter-spacing="-.6">NEURO<tspan fill="#85efbd">EDGE</tspan></text>
+<text x="50" y="129" fill="#f0f7f7" font-size="35" font-weight="740" letter-spacing="-1.25">From neural features to phoneme logits</text>
+<text x="50" y="165" class="muted" font-size="18">A synchronous fixed-point datapath with transactional calibration — and a separate, supervised feedback experiment</text>
+<rect x="1182" y="59" width="369" height="43" rx="21" stroke="#3d806d" fill="#0c2a28"/>
+<circle cx="1204" cy="80" r="5" fill="#7ff5bd"/><text x="1222" y="86" fill="#cdf7e0" font-size="15" font-weight="700">DIGITAL RTL: SIMULATION VERIFIED</text>
+<path d="M50 195H1550" stroke="#2f4b56" stroke-width="1"/>
+
+<rect x="48" y="229" width="264" height="266" rx="17" fill="#0f222e" stroke="#2f505c" stroke-width="1.5"/>
+<rect x="66" y="249" width="117" height="28" rx="7" fill="#18313c"/>
+<text x="79" y="268" fill="#71c9ff" class="tag">01 / SOURCE</text>
+<text x="67" y="313" class="h" font-size="22">NEURAL FEATURES</text>
+<text x="67" y="351" class="body">512 signed-INT8 features</text>
+<text x="67" y="381" class="body">per 20 ms bin</text>
+<text x="67" y="411" class="body">Prepared off chip</text>
+<line x1="66" y1="448" x2="294" y2="448" stroke="#2c5660"/>
+<circle cx="72" cy="468" r="4" fill="#71c9ff"/><text x="85" y="473" fill="#71c9ff" font-size="12.3" font-weight="700" letter-spacing=".6">RECORDED-DATA INTERFACE</text>
+<path d="M316 365H344" stroke="url(#light)" stroke-width="2.8" marker-end="url(#arrow)"/>
+<rect x="350" y="229" width="264" height="266" rx="17" fill="#0f222e" stroke="#2f505c" stroke-width="1.5"/>
+<rect x="368" y="249" width="117" height="28" rx="7" fill="#18313c"/>
+<text x="381" y="268" fill="#6df2c0" class="tag">02 / MEMORY</text>
+<text x="369" y="313" class="h" font-size="22">OFFSET TABLE</text>
+<text x="369" y="351" class="body">512 × signed INT16</text>
+<text x="369" y="381" class="body">Transactional commits</text>
+<text x="369" y="411" class="body">512 valid flags</text>
+<line x1="368" y1="448" x2="596" y2="448" stroke="#2c5660"/>
+<circle cx="374" cy="468" r="4" fill="#6df2c0"/><text x="387" y="473" fill="#6df2c0" font-size="12.3" font-weight="700" letter-spacing=".6">RTL MEMORY</text>
+<path d="M618 365H646" stroke="url(#light)" stroke-width="2.8" marker-end="url(#arrow)"/>
+<rect x="652" y="229" width="264" height="266" rx="17" fill="#0f222e" stroke="#2f505c" stroke-width="1.5"/>
+<rect x="670" y="249" width="117" height="28" rx="7" fill="#18313c"/>
+<text x="683" y="268" fill="#6df2c0" class="tag">03 / BRIDGE</text>
+<text x="671" y="313" class="h" font-size="22">CALIBRATION</text>
+<text x="671" y="351" class="body">Registered offset reads</text>
+<text x="671" y="381" class="body">Signed Q4 addition</text>
+<text x="671" y="411" class="body">INT8 saturation</text>
+<line x1="670" y1="448" x2="898" y2="448" stroke="#2c5660"/>
+<circle cx="676" cy="468" r="4" fill="#6df2c0"/><text x="689" y="473" fill="#6df2c0" font-size="12.3" font-weight="700" letter-spacing=".6">BIT-EXACT CONTRACT</text>
+<path d="M920 365H948" stroke="url(#light)" stroke-width="2.8" marker-end="url(#arrow)"/>
+<rect x="954" y="229" width="264" height="266" rx="17" fill="#0f222e" stroke="#2f505c" stroke-width="1.5"/>
+<rect x="972" y="249" width="117" height="28" rx="7" fill="#18313c"/>
+<text x="985" y="268" fill="#97baff" class="tag">04 / INFERENCE</text>
+<text x="973" y="313" class="h" font-size="22">CAUSAL DECODER</text>
+<text x="973" y="351" class="body">44,224 INT8 weights</text>
+<text x="973" y="381" class="body">Six-layer temporal CNN</text>
+<text x="973" y="411" class="body">Signed depthwise outputs</text>
+<line x1="972" y1="448" x2="1200" y2="448" stroke="#2c5660"/>
+<circle cx="978" cy="468" r="4" fill="#97baff"/><text x="991" y="473" fill="#97baff" font-size="12.3" font-weight="700" letter-spacing=".6">SYNCHRONOUS RTL</text>
+<path d="M1222 365H1250" stroke="url(#light)" stroke-width="2.8" marker-end="url(#arrow)"/>
+<rect x="1256" y="229" width="264" height="266" rx="17" fill="#0f222e" stroke="#2f505c" stroke-width="1.5"/>
+<rect x="1274" y="249" width="117" height="28" rx="7" fill="#18313c"/>
+<text x="1287" y="268" fill="#80d7d5" class="tag">05 / OUTPUT</text>
+<text x="1275" y="313" class="h" font-size="22">CTC LOGITS</text>
+<text x="1275" y="351" class="body">41 signed-INT16 scores</text>
+<text x="1275" y="381" class="body">One step every 4 bins</text>
+<text x="1275" y="411" class="body">Not decoded speech audio</text>
+<line x1="1274" y1="448" x2="1502" y2="448" stroke="#2c5660"/>
+<circle cx="1280" cy="468" r="4" fill="#80d7d5"/><text x="1293" y="473" fill="#80d7d5" font-size="12.3" font-weight="700" letter-spacing=".6">DIGITAL OUTPUT</text>
+<path d="M1430 502V535H1118V568" fill="none" stroke="#f8c391" stroke-dasharray="9 9" stroke-width="2.4" marker-end="url(#amber)"/>
+<path d="M1043 645H996" fill="none" stroke="#f8c391" stroke-dasharray="9 9" stroke-width="2.4" marker-end="url(#amber)"/>
+<path d="M765 569V531H482V503" fill="none" stroke="#f8c391" stroke-dasharray="9 9" stroke-width="2.4" marker-end="url(#amber)"/>
+<rect x="1040" y="570" width="480" height="177" rx="15" fill="#241e20" stroke="#9c7657"/>
+<text x="1065" y="603" fill="#ffd2a0" class="tag">SUPERVISED FEEDBACK · AFTER TRIAL</text>
+<text x="1065" y="638" fill="#fff2e5" font-size="23" font-weight="700">External reference target</text>
+<text x="1065" y="671" class="body">Compare completed-trial logits with</text>
+<text x="1065" y="699" class="body">an available supervised target.</text>
+<text x="1065" y="728" fill="#d5a980" font-size="14">No imagined-speech label is inferred.</text>
+<rect x="530" y="570" width="465" height="177" rx="15" fill="#17252b" stroke="#a98161"/>
+<text x="555" y="603" fill="#ffd2a0" class="tag">SOFTWARE-ONLY SYNTHETIC REPLAY</text>
+<text x="555" y="638" fill="#fff2e5" font-size="23" font-weight="700">Lagged offset policy</text>
+<text x="555" y="671" class="body">Probe bounded candidate offsets using</text>
+<text x="555" y="699" class="body">the completed trial’s causal state.</text>
+<text x="555" y="728" fill="#d5a980" font-size="14">Commit only before a subsequent bin.</text>
+<rect x="48" y="570" width="431" height="177" rx="15" fill="#161d2b" stroke="#68728d" stroke-dasharray="9 7"/>
+<text x="73" y="603" fill="#b8c7f8" class="tag">SEPARATE HARDWARE RESEARCH</text>
+<text x="73" y="638" fill="#e8ecff" font-size="23" font-weight="700">Compute-in-memory</text>
+<text x="73" y="671" class="body">RRAM / FeFET macros, ADC overhead</text>
+<text x="73" y="699" class="body">and physical PPA not established.</text>
+<text x="73" y="728" fill="#a1adcb" font-size="14">Not part of the verified datapath.</text>
+<line x1="50" y1="783" x2="1550" y2="783" stroke="#2a4654"/>
+<circle cx="65" cy="816" r="5" fill="#80f1bd"/><text x="82" y="822" fill="#accbc8" font-size="15">Solid arrows: verified forward behavior on original WSL source</text>
+<path d="M775 815H817" fill="none" stroke="#f8c391" stroke-dasharray="7 6" stroke-width="3"/><text x="831" y="822" fill="#accbc8" font-size="15">Dashed: synthetic supervised replay — no human loop</text>
+
+</svg>

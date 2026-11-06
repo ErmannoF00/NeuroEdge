@@ -1,0 +1,91 @@
+{
+  "project": "NeuroEdge",
+  "verification_origin": "user-provided Ubuntu WSL transcript, original implementation before public source renaming",
+  "verified_software_rtl": {
+    "python_tests": 97,
+    "bins": 32,
+    "features_per_bin": 512,
+    "logits_compared": 328,
+    "decoder_weights": 44224,
+    "simulated_latency_cycles": 90195,
+    "assumed_clock_hz": 25000000,
+    "hardware_frequency_measured": false,
+    "zero_offset_exact": true,
+    "commit_changes_logits": true,
+    "abort_denial_preserves_logits": true,
+    "reset_recovery": true,
+    "no_mid_bin_commit": true
+  },
+  "public_source_refactor": {
+    "renamed_rtl_reverified_in_wsl": true,
+    "user_reported_complete_marker": "NEUROEDGE_PUBLIC_REGRESSION_PASS",
+    "user_reported_integrated_marker": "NEUROEDGE_INTEGRATED_ALL_GATES_PASS",
+    "origin": "user-supplied Ubuntu WSL console output, 2026-11-06",
+    "source_environment": "private review repository; actual local project not inspected from this container",
+    "python_tests_user_reported": 106,
+    "synthetic_integrated_bins": 32,
+    "synthetic_integrated_exact_logits": 328,
+    "frequency_signoff": false,
+    "prior_unrenamed_real_neural_evidence_is_separate": true
+  },
+  "neural_accuracy_context": {
+    "august_2023_int8_per": 0.58732,
+    "december_2023_shift_development_int8_per": 0.73739,
+    "caveat": "December session used for development; not an untouched test set"
+  },
+  "limitations": {
+    "clinical_validation": false,
+    "fabricated_chip": false,
+    "real_analog_acquisition": false,
+    "in_memory_mac_verified": false,
+    "closed_loop_quality_improvement_proven": false
+  },
+  "synthetic_supervised_feedback_replay": {
+    "provenance": "entirely synthetic non-learned parameters and clean-logit teacher",
+    "command": "PYTHONPATH=. python3 scripts/run_closed_loop_replay.py",
+    "bins": 32,
+    "fixed_logit_l1": 135,
+    "controlled_logit_l1": 42,
+    "accepted_writes": 4,
+    "human_feedback": false,
+    "recorded_neural_accuracy": false,
+    "hardware_adaptation_tested": false,
+    "evidence_path": "demo/closed_loop_replay.json",
+    "sham_logit_l1": 163,
+    "sham_accepted_writes": 7
+  },
+  "recorded_neural_connected_replay": {
+    "origin": "user-supplied WSL console output, 2026-11-06; local HDF5/checkpoint not in package",
+    "trials": 4,
+    "bins": 3123,
+    "logit_values": 32103,
+    "output_steps": 783,
+    "modes": {
+      "off": {
+        "greedy_per": 0.5948275862068966,
+        "committed_writes": 0
+      },
+      "sham": {
+        "greedy_per": 0.603448275862069,
+        "committed_writes": 3
+      },
+      "supervised": {
+        "greedy_per": 0.5948275862068966,
+        "committed_writes": 0
+      }
+    },
+    "statement": "No beneficial adaptation demonstrated; zero supervised writes; not an untouched held-out study",
+    "real_time_demonstrated": false,
+    "clinical_validity": false,
+    "trial_count_too_small_for_inferential_claims": true
+  },
+  "memory_compute_standalone": {
+    "origin": "user-supplied WSL console output, 2026-11-06",
+    "python_tests_in_original_addon": 13,
+    "rtl_standalone_dot_pass": true,
+    "dot_length_tested": 8,
+    "dot_sum": -9676,
+    "full_projection_rtl_integrated": false,
+    "cim_macro_implemented": false
+  }
+}

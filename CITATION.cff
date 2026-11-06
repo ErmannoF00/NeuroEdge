@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Please cite the repository and the upstream neural dataset and research papers separately."
+title: "NeuroEdge: Causal Neural Decoding and Integer Hardware Research"
+type: software
+authors:
+  - name: "NeuroEdge contributors"
+license: MIT
+version: 0.1.0

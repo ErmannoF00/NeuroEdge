@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#070a11" />
+  <meta name="description" content="NeuroEdge — verified neural decoding from integer models to silicon-oriented RTL. An experimental BCI hardware research platform." />
+  <title>NeuroEdge — Neural decoding hardware research</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NeuroEdge — Neural decoding hardware research" />
+  <meta property="og:description" content="Causal fixed-point neural decoder and transactional offset memory, verified through software and RTL simulation. Research-stage." />
+  <meta property="og:image" content="assets/system_architecture.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="NeuroEdge home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span class="brand-text">NEURO<span>EDGE</span><small>NEURAL COMPUTING</small></span></a>
+    <button type="button" class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-menu">Menu <span aria-hidden="true">☰</span></button><nav class="main-nav" id="primary-menu" aria-label="Primary"><a href="#closedloop">Closed loop</a><a href="#system">Platform</a><a href="#evidence">Evidence</a><a href="#calibration">Offset lab</a><a href="#loop-demo">Replay</a><a href="#roadmap">Next steps</a><a href="#collaborate">Partners</a></nav>
+    <a class="nav-cta" href="#collaborate">Explore collaboration <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-led"></span> REORGANIZED RTL VERIFIED IN WSL · RESEARCH PROTOTYPE</div>
+        <h1>Neural features.<br/><span class="glow-type">Integer inference.</span><br/>Controlled updates<span class="period">.</span></h1>
+        <p class="hero-lead">A causal INT8 decoder with registered calibration reads, transactional INT16 offsets and exact Python/RTL numerical checks.</p>
+        <p class="hero-sub">The reorganized feature-to-logit path passed its synthetic WSL simulation regression. A separate software-only replay tests delayed supervised feedback; no in-memory MAC or human closed-loop system is claimed.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#closedloop">Inspect the architecture <span>↗</span></a><a class="button button-outline" href="#evidence">Review the evidence <span>↓</span></a></div>
+        <div class="hero-foot"><span class="glow-dot"></span> Research prototype — not a clinical or commercially released device</div>
+      </div>
+      <div class="hero-visual hero-visual--closedloop" aria-label="Conceptual neural-intent to memory-centered decoding system, with proposed closed-loop user feedback">
+        <img class="neuroedge-loop-hero" src="assets/neuroedge_closedloop_hero.svg" alt="Conceptual neural activity flowing into a memory-centered chip and returning via a proposed feedback loop" fetchpriority="high" />
+        <div class="hero-glass-label hero-glass-label--top"><span class="hero-light-dot"></span> 512 FEATURES / 20 ms · RECORDED DATA</div>
+        <div class="hero-glass-label hero-glass-label--bottom">TRANSACTIONAL SRAM <span>↗</span> INT8 RTL</div>
+        <span class="visual-disclaimer visual-disclaimer--closedloop">CONCEPTUAL VISUAL · NOT FABRICATED SILICON</span>
+      </div>
+    </section>
+
+    <section class="closedloop-section container" id="closedloop" aria-labelledby="closedloop-title">
+      <div class="section-index"><span>00</span> / CLOSED-LOOP SYSTEM CONCEPT</div>
+      <div class="closedloop-section-head">
+        <div><p class="kicker">VERIFIED FORWARD PATH · SYNTHETIC FEEDBACK REPLAY</p><h2 id="closedloop-title">Decode neural features.<br/><em>Control updates safely.</em></h2></div>
+        <p>The hardware implements a memory-calibrated feature-to-logit pipeline. A separately tested, strictly lagged software replay now exercises feedback-dependent commits using synthetic targets, not live user feedback.</p>
+      </div>
+      <figure class="closedloop-architecture">
+        <img src="assets/system_architecture.svg" alt="System diagram showing the verified neural feature to logits digital path, separate supervised synthetic feedback replay, and proposed compute-in-memory research." loading="lazy" />
+        <figcaption>Solid arrows represent the original simulation-verified feature-to-logit RTL. Dashed arrows show an offline supervised replay, not a demonstrated patient feedback system. Compute-in-memory is a separate future research track.</figcaption>
+      </figure>
+      <div class="closedloop-proof-grid">
+        <article><span>01 / BASELINE</span><strong>Transactional memory</strong><p>512 signed-INT16 offsets in Q4 units. Registered reads, saturating INT8 arithmetic and safe boundary commits.</p></article>
+        <article><span>02 / INFERENCE</span><strong>Causal neural decoder</strong><p>44,224 INT8 weights; 41 signed INT16 phoneme logits. Source integration passed recorded-vector RTL simulation.</p></article>
+        <article><span>03 / RESEARCH</span><strong>Feedback replay + CIM research</strong><p>Offline replay now tests bounded supervised proposals. Live feedback efficacy and RRAM/FeFET compute-in-memory remain unverified.</p></article>
+      </div>
+    </section>
+
+    <section class="metrics-band" id="evidence" aria-label="Verified experimental metrics">
+      <div class="container metrics-grid">
+        <article><div class="metric-heading">FEATURE DIMENSIONS</div><strong>512</strong><p>Precomputed features from 256 electrodes</p></article>
+        <article><div class="metric-heading">MODEL WEIGHTS</div><strong>44,224</strong><p>INT8 parameters in RTL memory</p></article>
+        <article><div class="metric-heading">EQUIVALENCE TEST</div><strong>328<span>/328</span></strong><p>Exact 16-bit logit values</p></article>
+        <article><div class="metric-heading">SIMULATED BIN LATENCY</div><strong>3.608<span> ms*</span></strong><p>90,195 cycles at assumed 25 MHz</p></article>
+      </div>
+    </section>
+
+    <section class="section container" id="system">
+      <div class="section-index"><span>01</span> / THE PLATFORM</div>
+      <div class="section-heading"><div><p class="kicker">IMPLEMENTED DIGITAL SYSTEM</p><h2>Defined modules.<br/><em>Exact arithmetic.</em></h2></div><p>The implemented pipeline accepts precomputed neural features. Hardware acquisition and neural feature extraction are outside this design.</p></div>
+      <div class="flow-board">
+        <div class="flow-top"><span>NEUROEDGE / SYSTEM ARCHITECTURE</span><span class="small-pill">RTL PROTOTYPE</span></div>
+        <div class="flow-nodes">
+          <article class="flow-node"><span class="node-no">01 / INPUT</span><div class="node-symbol node-wave">⌁</div><h3>Feature stream</h3><p>512 signed-INT8 features<br/>per 20 ms bin</p><span class="node-foot">RECORDED DATA</span></article>
+          <div class="flow-arrow" aria-hidden="true"><span></span></div>
+          <article class="flow-node"><span class="node-no">02 / MEMORY</span><div class="node-symbol">▦</div><h3>Offset memory</h3><p>512 × INT16 offset storage<br/>atomic commits</p><span class="node-foot">RTL VERIFIED</span></article>
+          <div class="flow-arrow" aria-hidden="true"><span></span></div>
+          <article class="flow-node"><span class="node-no">03 / BRIDGE</span><div class="node-symbol">◇</div><h3>Feature calibration</h3><p>Registered offset read<br/>saturating INT8 addition</p><span class="node-foot">RTL VERIFIED</span></article>
+          <div class="flow-arrow" aria-hidden="true"><span></span></div>
+          <article class="flow-node"><span class="node-no">04 / DECODER</span><div class="node-symbol">⊞</div><h3>Causal inference</h3><p>44,224 INT8 weights<br/>41 phoneme-class logits</p><span class="node-foot">RTL VERIFIED</span></article>
+        </div>
+        <div class="flow-bottom"><span><span class="tiny-led"></span> 32 RECORDED FEATURE BINS TESTED</span><span>INTEGRATED OUTPUTS EXACTLY MATCH THE INTEGER REFERENCE</span></div>
+      </div>
+    </section>
+
+    <section class="section container split-section" id="results">
+      <div class="analysis-copy"><div class="section-index"><span>02</span> / EVIDENCE, NOT HYPE</div><p class="kicker">EVALUATED ON RECORDED NEURAL FEATURES</p><h2>Verified integer arithmetic.<br/><em>Limited neural accuracy.</em></h2><p>The integer reference and RTL agree on tested logits. The trained model’s phoneme error remains high; bit-exact arithmetic alone does not establish usable speech communication.</p><div class="honesty-note"><span>!</span><div><b>Research transparency</b><p>No fabricated die photo, PPA numbers, clinical accuracy or demonstrated adaptive-decoding improvement.</p></div></div></div>
+      <div class="results-card"><div class="results-top"><span>DECODER / VALIDATION AND DEVELOPMENT</span><span>LOWER IS BETTER</span></div><div class="bar-entry"><div><b>AUGUST 2023</b><strong>58.73% PER</strong></div><div class="bar-track"><div class="bar-fill" style="--value:58.73%;"></div></div><small>35 validation trials · frozen INT8 network</small></div><div class="bar-entry"><div><b>DECEMBER 2023</b><strong>73.74% PER</strong></div><div class="bar-track"><div class="bar-fill bar-fill--alt" style="--value:73.74%;"></div></div><small>34 development trials · session shift</small></div><div class="footnote">The December session has already been used for development diagnostics and is not a pristine future holdout. PER is phoneme error rate.</div></div>
+    </section>
+
+    <section class="section container calibration-section" id="calibration" aria-labelledby="cal-title">
+      <div class="section-index"><span>03</span> / INTERACTIVE INTEGER DATAPATH</div>
+      <div class="section-heading"><div><p class="kicker">THE IMPLEMENTED NUMERICAL CONTRACT</p><h2 id="cal-title">Precise arithmetic.<br/><em>Deliberate transactions.</em></h2></div><p>Explore the exact signed-Q4 saturating addition performed before the neural decoder. Synthetic input values only; this is a deterministic engineering demonstration, not a prediction from neural data.</p></div>
+      <div class="calibration-grid">
+        <div class="calibration-controls">
+          <div class="calibration-top"><span>INPUT / Q4</span><span>512 FEATURES · SIGNED INT8</span></div>
+          <label for="raw-range">Feature value <output id="raw-value" for="raw-range">48</output></label>
+          <input id="raw-range" type="range" min="-128" max="127" value="48" step="1" />
+          <label for="offset-range">Committed offset <output id="offset-value" for="offset-range">32</output></label>
+          <input id="offset-range" type="range" min="-512" max="512" value="32" step="1" />
+          <label for="offset-number" class="number-label">Full INT16 offset range</label>
+          <input id="offset-number" class="numeric-offset" type="number" min="-32768" max="32767" step="1" value="32" inputmode="numeric" />
+          <p class="lab-help">Offsets are additive signed INT16 integers in the same Q4 units. Real commits are allowed only between complete 512-feature bins.</p>
+          <button class="lab-reset" id="lab-reset" type="button">Reset demonstration ↺</button>
+        </div>
+        <div class="calibration-display" aria-live="polite">
+          <div class="lab-label">REGISTERED OFFSET READ → SATURATING ADD → DECODER</div>
+          <div class="arith-line"><div><small>RAW · INT8</small><strong id="raw-preview">+48</strong></div><span>+</span><div><small>OFFSET · INT16</small><strong id="offset-preview">+32</strong></div><span>=</span><div class="arith-out"><small>CALIBRATED · INT8</small><strong id="cal-preview">+80</strong></div></div>
+          <div class="cal-scale"><span>-128</span><span>0</span><span>+127</span></div>
+          <div class="cal-track"><div id="cal-track-fill"></div><div class="cal-track-zero"></div></div>
+          <p class="cal-status" id="cal-status">No saturation · exact integer addition</p>
+          <p class="cal-footnote">Simulated numeric example. Not an inference prediction, hardware power estimate, or adaptive-learning result.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section container replay-section" id="loop-demo" aria-labelledby="replay-title">
+      <div class="section-index"><span>04</span> / OFFLINE FEEDBACK REPLAY</div>
+      <div class="section-heading"><div><p class="kicker">DETERMINISTIC SUPERVISED TEST · SYNTHETIC DATA</p><h2 id="replay-title">A trial ends.<br/><em>The next trial changes.</em></h2></div><p>The code tests a bounded change to an INT16 offset after a completed trial's synthetic target is revealed. Nothing here uses patient speech, live electrodes, or in-memory MACs.</p></div>
+      <div class="replay-layout">
+        <div class="replay-panel">
+          <div class="replay-kicker">TRIAL <strong id="replay-trial">0 / 7</strong><span id="replay-safety">TARGET DELAY ENFORCED</span></div>
+          <div class="replay-metrics"><div><small>FIXED OFFSET · LOGIT L1</small><strong id="replay-fixed">9</strong></div><div><small>CONTROLLED OFFSET · LOGIT L1</small><strong id="replay-controlled">9</strong></div><div><small>ACTIVE OFFSET · Q4</small><strong id="replay-offset">0</strong></div></div>
+          <div class="replay-bars"><div><span>Fixed baseline</span><div class="replay-track"><i id="replay-fixed-bar"></i></div></div><div><span>Predeclared sham updates</span><div class="replay-track"><i id="replay-sham-bar"></i></div></div><div><span>Delayed supervised control</span><div class="replay-track"><i id="replay-controlled-bar"></i></div></div></div>
+          <p id="replay-decision" class="replay-decision" aria-live="polite">Trial 0: no previous feedback available; no write.</p>
+          <div class="replay-actions"><button type="button" id="replay-next">Next completed trial <span>→</span></button><button type="button" id="replay-reset">Restart</button><a href="demo/closed_loop_replay.json" download>Inspect full synthetic trace</a></div>
+        </div>
+        <aside class="replay-aside"><span>MECHANISM</span><h3>Past output → supervised comparison → bounded proposal → next-trial memory</h3><p>Candidate scores are computed using the state captured <em>before the completed trial</em>. The target becomes available only after it finishes. Proposals are limited to ±4 Q4 units and authorized at safe boundaries.</p><p>The fixture compares no updates, predeclared sham updates, and controlled proposals against a known clean-logit teacher with injected drift in feature 0. The teacher is not available in an unconstrained real BCI; this test establishes control mechanics, not adaptation efficacy.</p><div class="replay-verdict">Original decoder and transactional memory are unchanged. The feedback replay is Python-only.</div></aside>
+      </div>
+    </section>
+    <section class="section container evidence-ledger" id="ledger" aria-labelledby="ledger-title">
+      <div class="section-index"><span>05</span> / OPEN ENGINEERING RECORD</div>
+      <div class="section-heading"><div><p class="kicker">AUDITABLE SCIENCE</p><h2 id="ledger-title">Results with<br/><em>their limitations attached.</em></h2></div><p>Evidence is tagged by provenance. Reported timing uses an assumed design clock; the RTL is not a silicon prototype.</p></div>
+      <div class="ledger-grid"><article><span>DECODER / RECORDED-VECTOR SIMULATION</span><strong>328/328</strong><p>Exact signed-INT16 logits on 32 bins. Historical WSL verification of the unmodified decoder.</p></article><article><span>CALIBRATION / MEMORY TRANSACTIONS</span><strong>2 commits</strong><p>Accepted writes verified in stand-alone RTL. Not optimizer updates or demonstrated adaptation benefit.</p></article><article><span>COMPLETE / INTEGRATED RTL</span><strong>328 exact logits</strong><p>Recorded-vector integration passed in WSL, including safe writes, reset and output stalls. Renamed source also passed the synthetic full-integration regression in Ubuntu WSL (user-supplied log).</p></article><article><span>CONNECTED / REAL NEURAL STREAM</span><strong>59.48% PER</strong><p>Four attempted-speech validation trials: frozen 59.48%, sham 60.34%, delayed supervised 59.48%. No supervised memory updates occurred; no adaptation gain demonstrated.</p></article></div>
+      <a class="evidence-link" href="evidence.json" download>Download evidence ledger · JSON ↗</a>
+    </section>
+    <section class="section container" id="roadmap"><div class="section-index"><span>06</span> / ROAD TO HARDWARE</div><div class="section-heading"><div><p class="kicker">WHAT COMES NEXT</p><h2>What remains<br/><em>to be engineered.</em></h2></div><p>Current scope is simulation and offline replay. The next gates are integrated host control, held-out neural evaluation, memory macro characterization and physical timing.</p></div><div class="roadmap-grid"><article class="road-card current"><span class="road-status">SIMULATION VERIFIED</span><div class="road-icon">01</div><h3>Verified forward RTL</h3><p>Bit-exact inference, synchronous memory, monitored activity and controlled offset write transactions.</p></article><article class="road-card"><span class="road-status">SOFTWARE REPLAY / SYNTHETIC</span><div class="road-icon">02</div><h3>Offline feedback replay</h3><p>Lagged supervised proposals execute against the real integer software decoder on synthetic data. A four-trial real-neural offline replay ran; the supervised policy made no writes or PER improvement. Hardware feedback control remains unimplemented.</p></article><article class="road-card"><span class="road-status">PLANNED</span><div class="road-icon">03</div><h3>Silicon and sensing</h3><p>Map the logic to real cells, validate timing and energy, and develop an independent acquisition circuit.</p></article></div></section>
+
+    <section class="section container contact-section" id="collaborate"><div class="contact-orb" aria-hidden="true"></div><div class="section-index"><span>07</span> / RESEARCH PARTNERSHIPS</div><div class="contact-content"><div><p class="kicker">ENGINEERING COLLABORATIONS</p><h2>Validate the next<br/><em>engineering boundary.</em></h2><p>The source separates working decoder RTL from open questions in feedback control, neural generalization, analog acquisition and memory-centric ASIC design.</p></div><div class="contact-actions"><a href="#system" class="button button-primary">See the technical architecture <span>↗</span></a><p>Research collaboration inquiries: contact channel will appear after identity, privacy and inbox verification. No patient services or orders.</p></div></div></section>
+  </main>
+  <footer class="footer container"><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span class="brand-text">NEURO<span>EDGE</span><small>NEURAL COMPUTING</small></span></div><span>© 2026 NeuroEdge — experimental hardware research</span><span>Not a medical device · No patient services · No commercial availability</span></footer>
+  <script src="app.js" defer></script><script src="calibration.js" defer></script><script src="replay.js" defer></script><script src="navigation.js" defer></script>
+</body>
+</html>

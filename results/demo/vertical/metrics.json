@@ -1,0 +1,99 @@
+{
+  "dataset": "synthetic_demo_only",
+  "scientific_results_valid": false,
+  "disclaimer": "CI DEMO ONLY: synthetic labels, not neural decoding",
+  "subjects": {
+    "train": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "val": [
+      9,
+      10
+    ],
+    "test": [
+      11,
+      12
+    ]
+  },
+  "seed": 42,
+  "software_versions": {
+    "numpy": "2.3.5",
+    "sklearn": "1.8.0"
+  },
+  "source_file_hashes": {
+    "train": [],
+    "val": [],
+    "test": []
+  },
+  "preprocessing": "8 channels; 8-30Hz offline IIR; average-reference; log bandpower",
+  "scope_of_rtl": "quantized linear classification of precomputed features ONLY",
+  "metrics": {
+    "train": {
+      "n": 288,
+      "n_subjects": 8,
+      "float_accuracy": 0.9201388888888888,
+      "int_accuracy": 0.9236111111111112,
+      "int_balanced_accuracy": 0.9235779418150238,
+      "float_to_int_disagreement": 0.003472222222222222,
+      "confusion_matrix_int": [
+        [
+          130,
+          11
+        ],
+        [
+          11,
+          136
+        ]
+      ]
+    },
+    "val": {
+      "n": 72,
+      "n_subjects": 2,
+      "float_accuracy": 0.9305555555555556,
+      "int_accuracy": 0.9305555555555556,
+      "int_balanced_accuracy": 0.9350904799370574,
+      "float_to_int_disagreement": 0.0,
+      "confusion_matrix_int": [
+        [
+          30,
+          1
+        ],
+        [
+          4,
+          37
+        ]
+      ]
+    },
+    "test": {
+      "n": 72,
+      "n_subjects": 2,
+      "float_accuracy": 0.9305555555555556,
+      "int_accuracy": 0.9305555555555556,
+      "int_balanced_accuracy": 0.9350904799370574,
+      "float_to_int_disagreement": 0.0,
+      "confusion_matrix_int": [
+        [
+          30,
+          1
+        ],
+        [
+          4,
+          37
+        ]
+      ]
+    }
+  },
+  "abi": {
+    "abi": "neuroedge-linear-v1",
+    "input_features": 8,
+    "bias": 76,
+    "test_vector_count": 32
+  }
+}

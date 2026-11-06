@@ -1,0 +1,43 @@
+{
+  "abi": "neuroedge-linear-v1",
+  "input_features": 8,
+  "input_format": "signed int8",
+  "weight_format": "signed int8",
+  "output_format": "signed int32",
+  "weight_scale": 32,
+  "input_scale": 16,
+  "bias": 76,
+  "weight_values": [
+    -60,
+    71,
+    0,
+    -21,
+    37,
+    -13,
+    6,
+    -10
+  ],
+  "train_mean": [
+    -9.983139016254867,
+    -10.02840280722328,
+    -9.945928148649,
+    -10.057561679784355,
+    -9.953765987464715,
+    -10.108894074365965,
+    -9.939899425316325,
+    -9.909213434306146
+  ],
+  "train_std": [
+    0.3848937133223445,
+    0.4437984766020041,
+    0.3288892746562296,
+    0.3329306730048344,
+    0.36267427731759194,
+    0.29451959534499317,
+    0.31797747009102423,
+    0.30413610057293283
+  ],
+  "test_vector_count": 32,
+  "latency": "8 accepted input transfers plus registered output",
+  "interface": "one feature per accepted clock, backpressured result"
+}

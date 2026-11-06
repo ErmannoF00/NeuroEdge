@@ -1,0 +1,9 @@
+* text=auto
+*.sv text eol=lf
+*.vh text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.cir text eol=lf
+*.spice text eol=lf
+*.mem text eol=lf
+*.json text eol=lf

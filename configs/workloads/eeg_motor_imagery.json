@@ -1,0 +1,13 @@
+{
+  "name": "eeg_motor_imagery",
+  "input": "eeg",
+  "sampling_hz": 160,
+  "channels": 64,
+  "window_samples": 160,
+  "task": "left_vs_right_motor_imagery",
+  "split": "subject_held_out",
+  "metrics": [
+    "balanced_accuracy",
+    "macro_f1"
+  ]
+}

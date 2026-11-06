@@ -1,0 +1,11 @@
+{
+  "DESIGN_NAME": "neuroedge_top",
+  "VERILOG_FILES": [
+    "dir::../../rtl/frontend/delta_encoder.sv",
+    "dir::../../rtl/top/neuroedge_top.sv"
+  ],
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 20.0,
+  "FP_CORE_UTIL": 35,
+  "PL_TARGET_DENSITY_PCT": 40
+}

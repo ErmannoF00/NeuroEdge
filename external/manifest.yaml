@@ -1,0 +1,62 @@
+# Third-party sources are not silently vendored into this repository.
+# status values: safe_reference, optional_external, research_only_noncommercial, verify_before_vendor
+sources:
+  - name: SYNtzulA
+    role: ASIC neuromorphic reference
+    url: https://github.com/EOLAB-2025/SYNtzulA
+    license: MIT
+    status: safe_reference
+    citation: IEEE TCAD, DOI 10.1109/TCAD.2025.3645186
+
+  - name: X-HEEP
+    role: optional RISC-V MCU / accelerator host
+    url: https://github.com/x-heep/x-heep
+    license: Apache-2.0 WITH SHL-2.1 (unless otherwise noted)
+    status: safe_reference
+
+  - name: JKU IHP SG13G2 AMS chip template
+    role: chip assembly / open AMS flow reference
+    url: https://github.com/iic-jku/ihp-sg13g2-ams-chip-template
+    license: Solderpad Hardware License v2.1 / file-specific open licenses
+    status: safe_reference
+    citation: DOI 10.5281/zenodo.20129233
+
+  - name: YANA
+    role: event-driven SNN training/deployment/RTL reference
+    url: https://github.com/fzi-forschungszentrum-informatik/yana
+    license: CERN-OHL-W-2.0 hardware; EUPL-1.2 software
+    status: safe_reference
+
+  - name: OpenCIMTC
+    role: memristor CIM compiler/software-stack reference
+    url: https://github.com/Tsinghua-LEMON-Lab/OpenCIMTC
+    license: MIT
+    status: safe_reference
+    citation: Nature Communications 16, 2123 (2025)
+
+  - name: NeuroSim
+    role: device/circuit/architecture research estimator
+    url: https://github.com/neurosim/NeuroSim
+    license: CC BY-NC 4.0
+    status: research_only_noncommercial
+
+  - name: JART VCM
+    role: physics-based RRAM compact model
+    url: https://www.fz-juelich.de/en/pgi/pgi-7/research-groups-1/ag-menzel/jart-model
+    license: redistribution terms not stated clearly on the model landing page
+    status: optional_external
+    note: download directly from FZ Juelich/RWTH; cite corresponding paper; do not vendor until terms are confirmed
+
+  - name: EEG-Ferro
+    role: FeFET-aware EEG/SNN methodology reference
+    url: https://github.com/NEO-ETHZ/EEG-Ferro
+    license: no license identified in the repository page checked
+    status: verify_before_vendor
+    citation: APL Machine Learning 4, 026110 (2026), DOI 10.1063/5.0319912
+
+  - name: Memristor co-evolutional BCI
+    role: adaptive RRAM BCI decoding methodology reference
+    url: https://github.com/zhengwuliu/Memristor_Co-evoutional_BCI
+    license: verify repository terms before copying
+    status: verify_before_vendor
+    citation: Nature Electronics 8, 362-372 (2025), DOI 10.1038/s41928-025-01340-2

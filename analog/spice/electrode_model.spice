@@ -1,0 +1,7 @@
+* Simple Randles-like electrode interface for simulation teaching only
+* ports: E (biopotential source side), AFE (amplifier side)
+.subckt electrode E AFE params: RS=50k RCT=1Meg CDL=100n
+Rseries E n1 {RS}
+Rct n1 AFE {RCT}
+Cdl n1 AFE {CDL}
+.ends electrode
